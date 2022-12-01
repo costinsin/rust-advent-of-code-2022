@@ -35,10 +35,10 @@ pub fn part2(input: &String) -> Result<(), Box<dyn Error>> {
             if max_three_elves.len() < 3 {
                 max_three_elves.push(current_elf);
             } else {
-                let Some(min_elem) = max_three_elves.peek()
+                let Some(&min_elem) = max_three_elves.peek()
                     else { unreachable!("The heap should have 3 elements!") };
 
-                if *min_elem < current_elf {
+                if min_elem < current_elf {
                     max_three_elves.pop();
                     max_three_elves.push(current_elf);
                 }
