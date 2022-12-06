@@ -12,6 +12,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         3 => run_day!(day3, path),
         4 => run_day!(day4, path),
         5 => run_day!(day5, path),
+        6 => run_day!(day6, path),
         _ => println!("Not found"),
     }
 
